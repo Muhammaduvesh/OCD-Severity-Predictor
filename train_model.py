@@ -8,13 +8,13 @@ import joblib
 import os
 
 # Create directories
-os.makedirs('models', exist_ok=True)
-os.makedirs('data', exist_ok=True)
+# os.makedirs('models', exist_ok=True)
+# os.makedirs('data', exist_ok=True)
 
 print("🚀 Training OCD Severity Prediction Model...")
 
 # Load and preprocess data
-df = pd.read_csv('data/OCD-data.csv')
+df = pd.read_csv('OCD-data.csv')
 df['OCD Diagnosis Date'] = pd.to_datetime(df['OCD Diagnosis Date'])
 df['Previous Diagnoses'] = df['Previous Diagnoses'].fillna('None')
 df['Total Y-BOCS Score'] = df['Y-BOCS Score (Obsessions)'] + df['Y-BOCS Score (Compulsions)']
@@ -109,3 +109,4 @@ joblib.dump(feature_cols, 'models/feature_cols.pkl')
 
 print("\nPRODUCTION MODEL SAVED!")
 print("Run: streamlit run streamlit_app.py")
+
