@@ -7,10 +7,10 @@ st.set_page_config(page_title="OCD Predictor", layout="wide")
 
 @st.cache_resource
 def load_model():
-    model = joblib.load('models/ocd_model.pkl')
-    encoders = joblib.load('models/label_encoders.pkl')
-    target_encoder = joblib.load('models/target_encoder.pkl')
-    feature_cols = joblib.load('models/feature_cols.pkl')
+    model = joblib.load('ocd_model.pkl')
+    encoders = joblib.load('label_encoders.pkl')
+    target_encoder = joblib.load('target_encoder.pkl')
+    feature_cols = joblib.load('feature_cols.pkl')
     return model, encoders, target_encoder, feature_cols
 
 model, encoders, target_encoder, feature_cols = load_model()
@@ -106,3 +106,4 @@ with st.expander("Model Performance"):
 
 st.markdown("---")
 st.markdown("Built with ❤️ for healthcare analytics portfolios")
+
