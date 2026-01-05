@@ -105,5 +105,6 @@ with st.expander("Model Performance"):
     """)
 
 st.markdown("---")
-st.markdown("Built with ❤️ for healthcare analytics portfolios")
+st.markdown("Built with LOVE for healthcare analytics portfolios")
+
 
