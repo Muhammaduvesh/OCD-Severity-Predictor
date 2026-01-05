@@ -102,11 +102,12 @@ print("\nTop 5 Features:")
 print(importances.head())
 
 # SAVE ALL
-joblib.dump(best_rf, 'models/ocd_model.pkl')
-joblib.dump(le_dict, 'models/label_encoders.pkl')
-joblib.dump(le_target, 'models/target_encoder.pkl')
-joblib.dump(feature_cols, 'models/feature_cols.pkl')
+joblib.dump(best_rf, 'ocd_model.pkl')
+joblib.dump(le_dict, 'label_encoders.pkl')
+joblib.dump(le_target, 'target_encoder.pkl')
+joblib.dump(feature_cols, 'feature_cols.pkl')
 
 print("\nPRODUCTION MODEL SAVED!")
 print("Run: streamlit run streamlit_app.py")
+
 
